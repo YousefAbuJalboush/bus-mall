@@ -5,8 +5,11 @@ function getRandomNum() {
 }
 
 let leftImg = document.getElementById('leftImg');
+
 let centerImg = document.getElementById('centerImg');
+
 let rightImg = document.getElementById('rightImg');
+
 
 let buttonResults = document.getElementById('buttonResults');
 
@@ -81,8 +84,11 @@ function renderImages() {
   BusMall.allObject[rightIndex].show++;
 
   leftImg.src = BusMall.allObject[leftIndex].source;
+
   centerImg.src = BusMall.allObject[centerIndex].source;
+
   rightImg.src = BusMall.allObject[rightIndex].source;
+
 }
 
 
