@@ -158,6 +158,7 @@ function resultsImg() {
     li.textContent = `${BusMall.allObject[i].name} had ${BusMall.allObject[i].votes} votes, and was seen ${BusMall.allObject[i].show} times.`;
   }
   addChart();
+  buttonResults.removeEventListener('click', resultsImg);
 }
 
 
