@@ -18,7 +18,7 @@ header h1 {
 /* ********************************************** */
 
  main article {
-  height: 750px;
+  height: 850px;
     border: 2px solid black;
     margin: 1%;
 } 
@@ -73,7 +73,6 @@ header h1 {
 #text {
     font-size: 18px;
     text-align: justify;
-
 }
 
 
