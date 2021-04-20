@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 'use strict';
 
 function getRandomNum() {
@@ -69,6 +71,26 @@ new BusMall('wine-glass', 'img/wine-glass.jpg');
 // console.log(BusMall.allObject);
 
 renderImages();
+gettingLocalStorage();
+
+function saveLocalStorage(){
+
+  let saveStrigify = JSON.stringify(BusMall.allObject);
+
+  localStorage.setItem('BusMallObjects', saveStrigify);
+
+}
+
+function gettingLocalStorage(){
+  let info = localStorage.getItem('BusMallObjects');
+
+  let busMallInfo = JSON.parse(info);
+
+  if(busMallInfo !== null){
+    BusMall.allObject = busMallInfo;
+  }
+
+}
 
 function renderImages() {
 
@@ -136,10 +158,12 @@ function onClicking(event) {
     centerImg.removeEventListener('click', onClicking);
     rightImg.removeEventListener('click', onClicking);
 
+    saveLocalStorage();
 
     buttonResults.style.display = 'block';
   }
 }
+
 
 
 function resultsImg() {
@@ -187,3 +211,5 @@ function addChart() {
     }
   });
 }
+
+
